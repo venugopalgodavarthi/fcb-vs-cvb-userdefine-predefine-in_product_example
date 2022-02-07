@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        <tr><td>product id</td><td>productname</td><td>product desc</td><td>product price</td> <td>product img</td><td>product discount</td></tr>
+    {% for i in res %}
+    <tr><td>{{i.id}}</td><td>{{i.pname}}</td><td>{{i.pdesc}}</td><td>{{i.pprice}}</td> <td><img src="{{i.pimg.url}}" width="75" height="75"></td><td>{{i.discount}}</td></tr>
+    {%endfor%}
+
+    </table>
+</body>
+</html>
